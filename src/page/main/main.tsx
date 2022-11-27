@@ -1,14 +1,15 @@
-import { Carousel, Progress } from "flowbite-react";
-import React from "react";
-import { ICLikeActive } from "../../assets/icons";
-import BannerTop from "../../components/header/banner-top";
-import Navbar from "../../components/navbar/navbar";
-import { dataBanner } from "../../constant/data/banner";
-import { eksklusif } from "../../constant/data/eksklusif-product";
-import { sale } from "../../constant/data/sale-product";
-import Rating from "../../components/rating/rating";
-import { news } from "../../constant/data/new-product";
-import Footer from "../../components/footer/footer";
+import { Carousel, Progress } from 'flowbite-react';
+import React from 'react';
+import { ICLikeActive } from '../../assets/icons';
+import BannerTop from '../../components/header/banner-top';
+import Navbar from '../../components/navbar/navbar';
+import { dataBanner } from '../../constant/data/banner';
+import { eksklusif } from '../../constant/data/eksklusif-product';
+import { sale } from '../../constant/data/sale-product';
+import Rating from '../../components/rating/rating';
+import { news } from '../../constant/data/new-product';
+import Footer from '../../components/footer/footer';
+import { Link } from 'react-router-dom';
 
 function Main() {
   return (
@@ -19,12 +20,14 @@ function Main() {
         <Carousel>
           {dataBanner.map((item, index) => {
             return (
-              <img
-                key={index}
-                src={item.img}
-                alt=""
-                className="w-full h-[580px]"
-              />
+              <Link to={'/product-detail'}>
+                <img
+                  key={index}
+                  src={item.img}
+                  alt=""
+                  className="w-full h-[580px]"
+                />
+              </Link>
             );
           })}
         </Carousel>
@@ -38,7 +41,10 @@ function Main() {
         <div className="mt-12 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8 items-center justify-center">
           {sale.map((item, index) => {
             return (
-              <a className="relative h-full aspect-w-1 aspect-h-1 max-w-xs overflow-hidden bg-white group-hover:opacity-75 lg:aspect-none justify-center items-center mx-auto">
+              <Link
+                to={'/product-detail'}
+                className="relative h-full aspect-w-1 aspect-h-1 max-w-xs overflow-hidden bg-white group-hover:opacity-75 lg:aspect-none justify-center items-center mx-auto"
+              >
                 <div className="relative">
                   <img
                     src={item.img}
@@ -69,7 +75,7 @@ function Main() {
                 <div className="bg-pink-300 px-2 justify-center items-start absolute top-2">
                   <h3 className="text-sm font-light text-white">Flash Sale</h3>
                 </div>
-              </a>
+              </Link>
             );
           })}
         </div>
@@ -88,7 +94,8 @@ function Main() {
         <div className="mt-12 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-3 xl:gap-x-8 items-center justify-center">
           {eksklusif.map((item, index) => {
             return (
-              <a
+              <Link
+                to={'/brand-profile'}
                 key={index}
                 className="relative h-full aspect-w-1 aspect-h-1 max-w-xs overflow-hidden bg-white group-hover:opacity-75 lg:aspect-none justify-center items-center mx-auto"
               >
@@ -115,7 +122,7 @@ function Main() {
                     </button>
                   </div>
                 </div>
-              </a>
+              </Link>
             );
           })}
         </div>
@@ -129,7 +136,10 @@ function Main() {
         <div className="mt-12 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8 items-center justify-center">
           {news.map((item, index) => {
             return (
-              <a className="relative h-full aspect-w-1 aspect-h-1 max-w-xs overflow-hidden bg-white group-hover:opacity-75 lg:aspect-none justify-center items-center mx-auto">
+              <Link
+                to={'/product-detail'}
+                className="relative h-full aspect-w-1 aspect-h-1 max-w-xs overflow-hidden bg-white group-hover:opacity-75 lg:aspect-none justify-center items-center mx-auto"
+              >
                 <div className="relative">
                   <img
                     src={item.img}
@@ -158,7 +168,7 @@ function Main() {
                 <div className="bg-pink-300 px-2 justify-center items-start absolute top-2">
                   <h3 className="text-sm font-light text-white">New Arrival</h3>
                 </div>
-              </a>
+              </Link>
             );
           })}
         </div>
@@ -177,7 +187,10 @@ function Main() {
         <div className="mt-12 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8 items-center justify-center">
           {sale.map((item, index) => {
             return (
-              <a className="relative h-full aspect-w-1 aspect-h-1 max-w-xs overflow-hidden bg-white group-hover:opacity-75 lg:aspect-none justify-center items-center mx-auto">
+              <Link
+                to={'/favorite'}
+                className="relative h-full aspect-w-1 aspect-h-1 max-w-xs overflow-hidden bg-white group-hover:opacity-75 lg:aspect-none justify-center items-center mx-auto"
+              >
                 <div className="relative">
                   <img
                     src={item.img}
@@ -206,7 +219,7 @@ function Main() {
                 <div className="bg-pink-300 px-2 justify-center items-start absolute top-2">
                   <h3 className="text-sm font-light text-white">Best Deal</h3>
                 </div>
-              </a>
+              </Link>
             );
           })}
         </div>

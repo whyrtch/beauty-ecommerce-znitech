@@ -17,10 +17,12 @@ function App() {
         <Route path="/" element={<SignIn />} />
         <Route path="/login" element={<SignIn />} />
         <Route path="/dashboard" element={<Main />} />
+        <Route path="/favorite" element={<FlashSale />} />
         <Route path="/flash-sale" element={<FlashSale />} />
         <Route path="/brand" element={<Brand />} />
         <Route path="/brand-profile" element={<BrandProfile />} />
-        <Route path="/product" element={<ProductDetail />} />
+        <Route path="/product" element={<Main />} />
+        <Route path="/product-detail" element={<ProductDetail />} />
         <Route path="/cart-bag" element={<CartBag />} />
         <Route path="/checkout" element={<Checkout />} />
         <Route path="/account" element={<Account />} />

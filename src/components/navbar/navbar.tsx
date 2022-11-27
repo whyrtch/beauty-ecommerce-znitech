@@ -47,7 +47,7 @@ function Navbar() {
                 </Link>
               </li>
               <li>
-                <a href="#">
+                <a href="/favorite">
                   <img src={ICHeart} alt="" className="h-5 w-5" />
                 </a>
               </li>
@@ -232,9 +232,11 @@ function Navbar() {
           </div>
           {/* end burger */}
           <div className="relative hidden md:inline">
-            <h3 className=" text-xl lg:text-3xl font-bold z-10 absolute">
-              Beauty
-            </h3>
+            <Link to={"/dashboard"}>
+              <h3 className=" text-xl lg:text-3xl font-bold z-10 absolute">
+                Beauty
+              </h3>
+            </Link>
             <div className="absolute w-8 h-8 -z-1 bg-pink-200 rounded-full top-0" />
           </div>
           <div className=" bg-gray-100 px-2 py-1 rounded-lg w-full ml-2 md:w-2/5 ">

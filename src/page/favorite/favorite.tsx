@@ -1,12 +1,13 @@
-import { ICLikeActive } from "../../assets/icons";
-import BannerTop from "../../components/header/banner-top";
-import Footer from "../../components/footer/footer";
-import Navbar from "../../components/navbar/navbar";
-import { byBrand, byCategory, bySelection } from "../../constant/data/filter";
-import { sale } from "../../constant/data/sale-product";
-import { Fragment, useState } from "react";
-import { Dialog, Transition } from "@headlessui/react";
-import { Bars3Icon, XMarkIcon, FunnelIcon } from "@heroicons/react/24/outline";
+import { ICLikeActive } from '../../assets/icons';
+import BannerTop from '../../components/header/banner-top';
+import Footer from '../../components/footer/footer';
+import Navbar from '../../components/navbar/navbar';
+import { byBrand, byCategory, bySelection } from '../../constant/data/filter';
+import { sale } from '../../constant/data/sale-product';
+import { Fragment, useState } from 'react';
+import { Dialog, Transition } from '@headlessui/react';
+import { Bars3Icon, XMarkIcon, FunnelIcon } from '@heroicons/react/24/outline';
+import { Link } from 'react-router-dom';
 
 function FlashSale() {
   const [sidebarOpen, setSidebarOpen] = useState(true);
@@ -221,7 +222,8 @@ function FlashSale() {
             <div className="mt-12 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8 items-center justify-center">
               {sale.map((item, index) => {
                 return (
-                  <a
+                  <Link
+                    to={'/product-detail'}
                     key={index}
                     className="relative h-full aspect-w-1 aspect-h-1 max-w-xs overflow-hidden bg-white group-hover:opacity-75 lg:aspect-none justify-center items-center mx-auto"
                   >
@@ -257,7 +259,7 @@ function FlashSale() {
                         Flash Sale
                       </h3>
                     </div>
-                  </a>
+                  </Link>
                 );
               })}
             </div>

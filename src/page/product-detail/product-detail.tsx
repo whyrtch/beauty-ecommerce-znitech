@@ -1,20 +1,21 @@
-import React from "react";
-import BannerTop from "../../components/header/banner-top";
-import Navbar from "../../components/navbar/navbar";
-import Footer from "../../components/footer/footer";
-import { Product11 } from "../../assets/ilustrations";
-import Rating from "../../components/rating/rating";
-import { PlusIcon, MinusIcon } from "@heroicons/react/24/outline";
-import { detailProduct } from "../../constant/data/detail";
-import { AvatarS, ICLikeActive } from "../../assets/icons";
-import { sale } from "../../constant/data/sale-product";
+import React from 'react';
+import BannerTop from '../../components/header/banner-top';
+import Navbar from '../../components/navbar/navbar';
+import Footer from '../../components/footer/footer';
+import { Product11 } from '../../assets/ilustrations';
+import Rating from '../../components/rating/rating';
+import { PlusIcon, MinusIcon } from '@heroicons/react/24/outline';
+import { detailProduct } from '../../constant/data/detail';
+import { AvatarS, ICLikeActive } from '../../assets/icons';
+import { sale } from '../../constant/data/sale-product';
+import { Link } from 'react-router-dom';
 
 function ProductDetail() {
   return (
     <div className="w-full">
       <BannerTop />
       <Navbar />
-      <div className="container mx-auto px-4 py-14 h-screen">
+      <div className="container mx-auto px-4 py-14">
         <div className="grid grid-cols-1 lg:grid-cols-2 space-x-8">
           <div className="flex-col">
             <img src={Product11} alt="" className="h-[580px] w-full" />
@@ -54,7 +55,7 @@ function ProductDetail() {
             </p>
             <div className="items-center justify-center border-2 border-black w-max px-2 space-x-2">
               <button>
-                <PlusIcon className="h-3 w-3 text-black" />{" "}
+                <PlusIcon className="h-3 w-3 text-black" />{' '}
               </button>
               <input
                 type="text"
@@ -62,22 +63,26 @@ function ProductDetail() {
                 className="border-none flex-1 text-base w-8"
               />
               <button>
-                <MinusIcon className="h-3 w-3 text-black" />{" "}
+                <MinusIcon className="h-3 w-3 text-black" />{' '}
               </button>
             </div>
             <div className="mt-4 flex items-center space-x-4">
               <div className="flex-col">
-                <button className="flex items-center bg-[#FF0961] border-[#FF0961] border-2 py-3 px-4 font-semibold text-lg text-white">
-                  <PlusIcon className="h-4 w-4 text-white mr-2" /> Keranjang
-                </button>
+                <Link to={'/cart-bag'}>
+                  <button className="flex items-center bg-[#FF0961] border-[#FF0961] border-2 py-3 px-4 font-semibold text-lg text-white">
+                    <PlusIcon className="h-4 w-4 text-white mr-2" /> Keranjang
+                  </button>
+                </Link>
                 <p className="text-xs py-3 text-center text-gray-500">
                   Gratis pengiriman reguler
                 </p>
               </div>
               <div className="flex-col">
-                <button className="flex items-center bg-white py-3 px-4 font-semibold text-lg text-black border-2 border-black">
-                  Beli Sekarang
-                </button>
+                <Link to={'/checkout'}>
+                  <button className="flex items-center bg-white py-3 px-4 font-semibold text-lg text-black border-2 border-black">
+                    Beli Sekarang
+                  </button>
+                </Link>
                 <p className="text-xs py-3 text-center text-gray-500">
                   Gratis pengembalian
                 </p>
@@ -132,10 +137,10 @@ function ProductDetail() {
                 <div className="flex space-x-2 mt-2">
                   <h3 className="text-black">
                     Review ini membantu? Iya (4) Tidak (0)
-                  </h3>{" "}
+                  </h3>{' '}
                   <button className="underline px-2 border-l-[0.5px] border-l-black text-gray-300">
                     Report
-                  </button>{" "}
+                  </button>{' '}
                 </div>
               </div>
               <div>
@@ -160,10 +165,10 @@ function ProductDetail() {
                 <div className="flex space-x-2 mt-2">
                   <h3 className="text-black">
                     Review ini membantu? Iya (4) Tidak (0)
-                  </h3>{" "}
+                  </h3>{' '}
                   <button className="underline px-2 border-l-[0.5px] border-l-black text-gray-300">
                     Report
-                  </button>{" "}
+                  </button>{' '}
                 </div>
               </div>
               <div>
