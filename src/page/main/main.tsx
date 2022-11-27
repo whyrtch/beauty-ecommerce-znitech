@@ -80,9 +80,11 @@ function Main() {
           })}
         </div>
         <div className="flex">
-          <button className="border-2 py-2 px-4 border-black text-black mx-auto mt-14 hover:bg-black hover:text-white font-bold text-lg">
-            See more
-          </button>
+          <Link to={'/flash-sale'}>
+            <button className="border-2 py-2 px-4 border-black text-black mx-auto mt-14 hover:bg-black hover:text-white font-bold text-lg">
+              See more
+            </button>
+          </Link>
         </div>
       </div>
       {/* BRAND EKSKLUSIF */}
@@ -173,9 +175,11 @@ function Main() {
           })}
         </div>
         <div className="flex">
-          <button className="border-2 py-2 px-4 border-black text-black mx-auto mt-14 hover:bg-black hover:text-white font-bold text-lg">
-            See more
-          </button>
+          <Link to={'product'}>
+            <button className="border-2 py-2 px-4 border-black text-black mx-auto mt-14 hover:bg-black hover:text-white font-bold text-lg">
+              See more
+            </button>
+          </Link>
         </div>
       </div>
       {/* PRODUK FAVORIT */}
@@ -224,9 +228,11 @@ function Main() {
           })}
         </div>
         <div className="flex">
-          <button className="border-2 py-2 px-4 border-black text-black mx-auto mt-14 hover:bg-black hover:text-white font-bold text-lg">
-            See more
-          </button>
+          <Link to={'/favorite'}>
+            <button className="border-2 py-2 px-4 border-black text-black mx-auto mt-14 hover:bg-black hover:text-white font-bold text-lg">
+              See more
+            </button>
+          </Link>
         </div>
         <div className="my-12 h-[0.5px] bg-gray-800" />
       </div>

@@ -1,13 +1,14 @@
-import { ICLikeActive } from "../../assets/icons";
-import BannerTop from "../../components/header/banner-top";
-import Navbar from "../../components/navbar/navbar";
-import { sale } from "../../constant/data/sale-product";
-import Rating from "../../components/rating/rating";
-import { news } from "../../constant/data/new-product";
-import Footer from "../../components/footer/footer";
-import { Banner6 } from "../../assets/ilustrations";
-import { byTag } from "../../constant/data/filter";
-import { eksklusif } from "../../constant/data/eksklusif-product";
+import { ICLikeActive } from '../../assets/icons';
+import BannerTop from '../../components/header/banner-top';
+import Navbar from '../../components/navbar/navbar';
+import { sale } from '../../constant/data/sale-product';
+import Rating from '../../components/rating/rating';
+import { news } from '../../constant/data/new-product';
+import Footer from '../../components/footer/footer';
+import { Banner6 } from '../../assets/ilustrations';
+import { byTag } from '../../constant/data/filter';
+import { eksklusif } from '../../constant/data/eksklusif-product';
+import { Link } from 'react-router-dom';
 
 function Brand() {
   return (
@@ -19,7 +20,8 @@ function Brand() {
           <div className="mt-12 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-3 xl:gap-x-8 items-center justify-center">
             {eksklusif.map((item, index) => {
               return (
-                <a
+                <Link
+                  to={'/brand-profile'}
                   key={index}
                   className="relative h-full aspect-w-1 aspect-h-1 max-w-xs overflow-hidden bg-white group-hover:opacity-75 lg:aspect-none justify-center items-center mx-auto"
                 >
@@ -46,7 +48,7 @@ function Brand() {
                       </button>
                     </div>
                   </div>
-                </a>
+                </Link>
               );
             })}
           </div>
@@ -61,7 +63,8 @@ function Brand() {
           <div className="mt-12 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8 items-center justify-center">
             {news.map((item, index) => {
               return (
-                <a
+                <Link
+                  to={'/flash-sale'}
                   key={index}
                   className="relative h-full aspect-w-1 aspect-h-1 max-w-xs overflow-hidden bg-white group-hover:opacity-75 lg:aspect-none justify-center items-center mx-auto"
                 >
@@ -95,7 +98,7 @@ function Brand() {
                       New Arrival
                     </h3>
                   </div>
-                </a>
+                </Link>
               );
             })}
           </div>

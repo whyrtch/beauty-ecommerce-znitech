@@ -1,7 +1,8 @@
-import BannerTop from "../../components/header/banner-top";
-import Navbar from "../../components/navbar/navbar";
-import Footer from "../../components/footer/footer";
-import { Paypal, Product12, Visa } from "../../assets/ilustrations";
+import BannerTop from '../../components/header/banner-top';
+import Navbar from '../../components/navbar/navbar';
+import Footer from '../../components/footer/footer';
+import { Paypal, Product12, Visa } from '../../assets/ilustrations';
+import { Link } from 'react-router-dom';
 
 function Checkout() {
   return (
@@ -97,9 +98,11 @@ function Checkout() {
                     </p>
                   </div>
                 </div>
-                <button className="bg-[#FF0961] w-full p-3 mt-4 font-medium text-lg text-white">
-                  Continue to shipping
-                </button>
+                <Link to={'/dashboard'}>
+                  <button className="bg-[#FF0961] w-full p-3 mt-4 font-medium text-lg text-white">
+                    Continue to shipping
+                  </button>
+                </Link>
               </div>
               {/* step 2 */}
               <div className="flex-col hidden  w-full lg:w-[500px]">
@@ -161,9 +164,11 @@ function Checkout() {
                     </p>
                   </div>
                 </div>
-                <button className="bg-[#FF0961] w-full p-3 mt-4 font-medium text-lg text-white">
-                  Continue to shipping
-                </button>
+                <Link to={'/dashboard'}>
+                  <button className="bg-[#FF0961] w-full p-3 mt-4 font-medium text-lg text-white">
+                    Continue to shipping
+                  </button>
+                </Link>
               </div>
               {/* step 3 */}
               <div className="flex-col  w-full lg:w-[500px]">
@@ -229,9 +234,11 @@ function Checkout() {
                     />
                   </div>
                 </div>
-                <button className="bg-[#FF0961] w-full p-3 mt-4 font-medium text-lg text-white">
-                  Continue to shipping
-                </button>
+                <Link to={'/dashboard'}>
+                  <button className="bg-[#FF0961] w-full p-3 mt-4 font-medium text-lg text-white">
+                    Continue to shipping
+                  </button>
+                </Link>
               </div>
             </div>
           </div>
