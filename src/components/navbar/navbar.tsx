@@ -47,9 +47,11 @@ function Navbar() {
                 </Link>
               </li>
               <li>
-                <a href="/favorite">
+                <Link to="/favorite">
+                  <a href="#">
                   <img src={ICHeart} alt="" className="h-5 w-5" />
-                </a>
+                  </a>
+                </Link>
               </li>
               <li>
                 <Link to="/cart-bag">
@@ -245,7 +247,7 @@ function Navbar() {
               <input
                 type="text"
                 placeholder="Search"
-                className=" bg-gray-100 text-sm border-0"
+                className=" bg-gray-100 text-sm border-0 flex-1 outline-none focus:outline-none"
               />
             </div>
           </div>

@@ -198,10 +198,7 @@ function ProductDetail() {
           <div className="mt-12 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8 items-center justify-center">
             {sale.map((item, index) => {
               return (
-                <Link
-                  to={'/product-detail'}
-                  className="relative h-full aspect-w-1 aspect-h-1 max-w-xs overflow-hidden bg-white group-hover:opacity-75 lg:aspect-none justify-center items-center mx-auto"
-                >
+                <a className="relative h-full aspect-w-1 aspect-h-1 max-w-xs overflow-hidden bg-white group-hover:opacity-75 lg:aspect-none justify-center items-center mx-auto">
                   <div className="relative">
                     <img
                       src={item.img}
@@ -234,7 +231,7 @@ function ProductDetail() {
                       Flash Sale
                     </h3>
                   </div>
-                </Link>
+                </a>
               );
             })}
           </div>

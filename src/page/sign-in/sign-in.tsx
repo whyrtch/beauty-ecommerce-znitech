@@ -1,8 +1,8 @@
-import React from 'react';
-import { BgPink } from '../../assets/ilustrations';
-import BannerTop from '../../components/header/banner-top';
-import Navbar from '../../components/navbar/navbar';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { BgPink } from "../../assets/ilustrations";
+import BannerTop from "../../components/header/banner-top";
+import Navbar from "../../components/navbar/navbar";
+import { Link } from "react-router-dom";
 
 function SignIn() {
   return (
@@ -52,16 +52,17 @@ function SignIn() {
               </h3>
             </a>
           </div>
-          <Link to={'/dashboard'}>
+          <Link to="/dashboard">
             <button className="mt-8 bg-pink-500 w-full p-3 text-sm md:text-xl font-semibold text-white">
               Login
             </button>
           </Link>
-          <Link to="/">
+
+          <a href="">
             <h3 className="text-sm underline text-gray-400 text-center mt-8">
-              Already account{' '}
+              Already account{" "}
             </h3>
-          </Link>
+          </a>
         </div>
       </div>
     </div>

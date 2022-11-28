@@ -9,7 +9,7 @@ import { Dialog, Transition } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon, FunnelIcon } from '@heroicons/react/24/outline';
 import { Link } from 'react-router-dom';
 
-function FlashSale() {
+function Favorite() {
   const [sidebarOpen, setSidebarOpen] = useState(true);
   return (
     <div className="w-full">
@@ -222,43 +222,44 @@ function FlashSale() {
             <div className="mt-12 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8 items-center justify-center">
               {sale.map((item, index) => {
                 return (
-                  <Link
-                    to={'/product-detail'}
-                    key={index}
-                    className="relative h-full aspect-w-1 aspect-h-1 max-w-xs overflow-hidden bg-white group-hover:opacity-75 lg:aspect-none justify-center items-center mx-auto"
-                  >
-                    <div className="relative">
-                      <img
-                        src={item.img}
-                        className="h-56 w-full mx-auto object-contain"
-                        alt=""
-                      />
-                      <button className="absolute h-7 w-7 border-[0.5px] rounded-full justify-center items-center border-gray-200 right-6">
-                        <img src={ICLikeActive} className="mx-auto" alt="" />
-                      </button>
-                    </div>
-                    <div className="p-5">
-                      <h1 className="text-sm text-pink-400 text-center">
-                        {item.brand}
-                      </h1>
-                      <h3 className="text-black text-lg font-medium text-center my-2">
-                        {item.name}
-                      </h3>
-                      <div className="w-52 mx-auto bg-gray-100 rounded-full h-3 dark:bg-gray-700">
-                        <div className="bg-pink-400 h-3 rounded-full w-20"></div>
+                  <Link to={'/product-detail'}>
+                    <a
+                      key={index}
+                      className="relative h-full aspect-w-1 aspect-h-1 max-w-xs overflow-hidden bg-white group-hover:opacity-75 lg:aspect-none justify-center items-center mx-auto"
+                    >
+                      <div className="relative">
+                        <img
+                          src={item.img}
+                          className="h-56 w-full mx-auto object-contain"
+                          alt=""
+                        />
+                        <button className="absolute h-7 w-7 border-[0.5px] rounded-full justify-center items-center border-gray-200 right-6">
+                          <img src={ICLikeActive} className="mx-auto" alt="" />
+                        </button>
                       </div>
-                      <h3 className="text-black text-base font-light text-center mt-2 line-through">
-                        Rp. {item.discont}
-                      </h3>
-                      <h3 className="text-pink-400 text-base font-medium text-center">
-                        Rp. {item.total}
-                      </h3>
-                    </div>
-                    <div className="bg-pink-300 px-2 justify-center items-start absolute top-2">
-                      <h3 className="text-sm font-light text-white">
-                        Flash Sale
-                      </h3>
-                    </div>
+                      <div className="p-5">
+                        <h1 className="text-sm text-pink-400 text-center">
+                          {item.brand}
+                        </h1>
+                        <h3 className="text-black text-lg font-medium text-center my-2">
+                          {item.name}
+                        </h3>
+                        <div className="w-52 mx-auto bg-gray-100 rounded-full h-3 dark:bg-gray-700">
+                          <div className="bg-pink-400 h-3 rounded-full w-20"></div>
+                        </div>
+                        <h3 className="text-black text-base font-light text-center mt-2 line-through">
+                          Rp. {item.discont}
+                        </h3>
+                        <h3 className="text-pink-400 text-base font-medium text-center">
+                          Rp. {item.total}
+                        </h3>
+                      </div>
+                      <div className="bg-pink-300 px-2 justify-center items-start absolute top-2">
+                        <h3 className="text-sm font-light text-white">
+                          Flash Sale
+                        </h3>
+                      </div>
+                    </a>
                   </Link>
                 );
               })}
@@ -276,4 +277,4 @@ function FlashSale() {
   );
 }
 
-export default FlashSale;
+export default Favorite;

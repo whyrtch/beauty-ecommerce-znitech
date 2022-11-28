@@ -9,7 +9,7 @@ function Account() {
     <div className="w-full">
       <Header />
       <Navbar />
-      <div className="container mx-auto px-2 lg:px-4 my-8 h-screen">
+      <div className="container mx-auto px-2 lg:px-4 my-8">
         <div className="grid grid-cols-1 lg:grid-cols-2">
           <div className="flex-col">
             <h1 className="text-xl lg:text-2xl text-black font-light">AKUN</h1>

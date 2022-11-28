@@ -1,17 +1,16 @@
 import BannerTop from "../../components/header/banner-top";
 import Navbar from "../../components/navbar/navbar";
-
 import Footer from "../../components/footer/footer";
-import { Product11, Product12 } from "../../assets/ilustrations";
+import { Product12 } from "../../assets/ilustrations";
 import { MinusIcon, PlusIcon } from "@heroicons/react/24/outline";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function CartBag() {
   return (
     <div className="w-full">
       <BannerTop />
       <Navbar />
-      <div className="container mx-auto px-2 lg:px-4 my-24 h-screen">
+      <div className="container mx-auto px-2 lg:px-4 my-24">
         <div className="grid grid-cols-1 lg:grid-cols-2 lg:space-x-8">
           <div className="flex-col">
             <div className="">
@@ -141,7 +140,7 @@ function CartBag() {
               <h3 className="text-black font-medium text-lg">Total</h3>
               <h3 className="text-black font-medium text-lg">Rp. 153.000</h3>
             </div>
-            <Link to={"/checkout"}>
+            <Link to="/checkout">
               <button className="bg-[#FF0961] w-full p-3 mt-4 font-medium text-lg text-white">
                 Continue to checkout
               </button>
